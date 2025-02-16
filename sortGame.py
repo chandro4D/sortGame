@@ -16,3 +16,8 @@ class Tube:
         if self.is_empty():
             return None
         return self.colors[-1]
+        def is_full(self):
+        return len(self.colors) == 4
+
+    def is_empty(self):
+        return len(self.colors) == 0
