@@ -21,3 +21,9 @@ class Tube:
 
     def is_empty(self):
         return len(self.colors) == 0
+    def can_pour_into(self, other):
+        if self.is_empty() or other.is_full():
+            return False
+        if other.is_empty():
+            return True
+        return self.peek_color() == other.peek_color()
