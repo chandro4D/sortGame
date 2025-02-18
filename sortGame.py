@@ -27,3 +27,8 @@ class Tube:
         if other.is_empty():
             return True
         return self.peek_color() == other.peek_color()
+class WaterSortGame:
+    def __init__(self, root, num_tubes):
+        self.tubes = [Tube() for _ in range(num_tubes)]
+        self.root = root
+        self.selected_tube = None
