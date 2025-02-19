@@ -32,3 +32,8 @@ class WaterSortGame:
         self.tubes = [Tube() for _ in range(num_tubes)]
         self.root = root
         self.selected_tube = None
+        self.setup_ui()
+
+    def setup_ui(self):
+        self.root.configure(bg="#303036")
+        self.root.geometry("1650x1000")
