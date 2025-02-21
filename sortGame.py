@@ -52,3 +52,7 @@ class WaterSortGame:
             fg="#FFD700",
         )
         title.pack(pady=120)
+        
+        self.tube_frames = []
+        tube_container = tk.Frame(self.root, bg="#303036")
+        tube_container.pack(pady=10)
