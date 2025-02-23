@@ -56,3 +56,12 @@ class WaterSortGame:
         self.tube_frames = []
         tube_container = tk.Frame(self.root, bg="#303036")
         tube_container.pack(pady=10)
+        
+        for i in range(len(self.tubes)):
+            frame = tk.Frame(
+                tube_container, relief=tk.RAISED, borderwidth=2, bg="#444", padx=15, pady=15
+            )
+            frame.grid(row=0, column=i, padx=20)
+            self.tube_frames.append(frame)
+
+        self.update_ui()
