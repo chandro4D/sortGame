@@ -65,3 +65,7 @@ class WaterSortGame:
             self.tube_frames.append(frame)
 
         self.update_ui()
+        def update_ui(self):
+        for i, tube in enumerate(self.tubes):
+            for widget in self.tube_frames[i].winfo_children():
+                widget.destroy()
