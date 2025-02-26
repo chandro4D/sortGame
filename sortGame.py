@@ -69,3 +69,15 @@ class WaterSortGame:
         for i, tube in enumerate(self.tubes):
             for widget in self.tube_frames[i].winfo_children():
                 widget.destroy()
+                colors = tube.colors[::-1]
+            for color in colors:
+                color_label = tk.Label(
+                    self.tube_frames[i],
+                    text="",
+                    bg=color,
+                    width=8,
+                    height=2,
+                    relief=tk.RAISED,
+                    bd=1,
+                )
+                color_label.pack(pady=3)
