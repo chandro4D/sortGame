@@ -93,3 +93,8 @@ class WaterSortGame:
                 pady=5,
             )
             button.pack(pady=10) 
+                def show_temporary_message(self, message, color, width, height, duration, position="center"):
+        """Show a temporary pop-up message with specific size, duration, and position."""
+        popup = tk.Toplevel(self.root)
+        popup.title("Message")
+        popup.geometry(f"{width}x{height}")
