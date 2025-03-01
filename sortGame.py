@@ -98,3 +98,8 @@ class WaterSortGame:
         popup = tk.Toplevel(self.root)
         popup.title("Message")
         popup.geometry(f"{width}x{height}")
+        if position == "center":
+            x = (self.root.winfo_screenwidth() - width) // 2
+            y = (self.root.winfo_screenheight() - height) // 2
+        elif position == "left":
+            x, y = 0, 0 
