@@ -103,3 +103,5 @@ class WaterSortGame:
             y = (self.root.winfo_screenheight() - height) // 2
         elif position == "left":
             x, y = 0, 0 
+        popup.geometry(f"{width}x{height}+{x}+{y}")
+        popup.configure(bg=color)
