@@ -52,11 +52,11 @@ class WaterSortGame:
             fg="#FFD700",
         )
         title.pack(pady=120)
-        
+
         self.tube_frames = []
         tube_container = tk.Frame(self.root, bg="#303036")
         tube_container.pack(pady=10)
-        
+
         for i in range(len(self.tubes)):
             frame = tk.Frame(
                 tube_container, relief=tk.RAISED, borderwidth=2, bg="#444", padx=15, pady=15
@@ -65,52 +65,3 @@ class WaterSortGame:
             self.tube_frames.append(frame)
 
         self.update_ui()
-        def update_ui(self):
-        for i, tube in enumerate(self.tubes):
-            for widget in self.tube_frames[i].winfo_children():
-                widget.destroy()
-                colors = tube.colors[::-1]
-            for color in colors:
-                color_label = tk.Label(
-                    self.tube_frames[i],
-                    text="",
-                    bg=color,
-                    width=8,
-                    height=2,
-                    relief=tk.RAISED,
-                    bd=1,
-                )
-                color_label.pack(pady=3)
-                            button = tk.Button(
-                self.tube_frames[i],
-                text=f"Tube {i + 1}",
-                command=lambda idx=i: self.select_tube(idx),
-                font=("Arial", 10, "bold"),
-                bg="#6A5ACD",
-                fg="white",
-                activebackground="#483D8B",
-                width=12,
-                pady=5,
-            )
-            button.pack(pady=10) 
-                def show_temporary_message(self, message, color, width, height, duration, position="center"):
-        """Show a temporary pop-up message with specific size, duration, and position."""
-        popup = tk.Toplevel(self.root)
-        popup.title("Message")
-        popup.geometry(f"{width}x{height}")
-        if position == "center":
-            x = (self.root.winfo_screenwidth() - width) // 2
-            y = (self.root.winfo_screenheight() - height) // 2
-        elif position == "left":
-            x, y = 0, 0 
-        popup.geometry(f"{width}x{height}+{x}+{y}")
-        popup.configure(bg=color)
-        
-        label = tk.Label(
-            popup,
-            text=message,
-            font=("Arial", 12, "bold"),
-            bg=color,
-            fg="white",
-        )
-        label.pack(expand=True, pady=20)
