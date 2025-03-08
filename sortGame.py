@@ -82,3 +82,15 @@ class WaterSortGame:
                     bd=1,
                 )
                 color_label.pack(pady=3)
+                button = tk.Button(
+                self.tube_frames[i],
+                text=f"Tube {i + 1}",
+                command=lambda idx=i: self.select_tube(idx),
+                font=("Arial", 10, "bold"),
+                bg="#6A5ACD",
+                fg="white",
+                activebackground="#483D8B",
+                width=12,
+                pady=5,
+            )
+            button.pack(pady=10)
