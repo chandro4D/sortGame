@@ -106,3 +106,11 @@ class WaterSortGame:
             x, y = 0, 0  
         popup.geometry(f"{width}x{height}+{x}+{y}")
         popup.configure(bg=color)
+         label = tk.Label(
+            popup,
+            text=message,
+            font=("Arial", 12, "bold"),
+            bg=color,
+            fg="white",
+        )
+        label.pack(expand=True, pady=20)
