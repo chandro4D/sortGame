@@ -65,6 +65,7 @@ class WaterSortGame:
             self.tube_frames.append(frame)
 
         self.update_ui()
+
     def update_ui(self):
         for i, tube in enumerate(self.tubes):
             for widget in self.tube_frames[i].winfo_children():
@@ -82,7 +83,8 @@ class WaterSortGame:
                     bd=1,
                 )
                 color_label.pack(pady=3)
-                button = tk.Button(
+
+            button = tk.Button(
                 self.tube_frames[i],
                 text=f"Tube {i + 1}",
                 command=lambda idx=i: self.select_tube(idx),
@@ -94,11 +96,14 @@ class WaterSortGame:
                 pady=5,
             )
             button.pack(pady=10)
-            def show_temporary_message(self, message, color, width, height, duration, position="center"):
+
+    def show_temporary_message(self, message, color, width, height, duration, position="center"):
         """Show a temporary pop-up message with specific size, duration, and position."""
         popup = tk.Toplevel(self.root)
         popup.title("Message")
         popup.geometry(f"{width}x{height}")
+
+        
         if position == "center":
             x = (self.root.winfo_screenwidth() - width) // 2
             y = (self.root.winfo_screenheight() - height) // 2
@@ -106,7 +111,8 @@ class WaterSortGame:
             x, y = 0, 0  
         popup.geometry(f"{width}x{height}+{x}+{y}")
         popup.configure(bg=color)
-         label = tk.Label(
+
+        label = tk.Label(
             popup,
             text=message,
             font=("Arial", 12, "bold"),
@@ -114,3 +120,6 @@ class WaterSortGame:
             fg="white",
         )
         label.pack(expand=True, pady=20)
+
+        
+        popup.after(duration, popup.destroy)
