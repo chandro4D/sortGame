@@ -123,3 +123,9 @@ class WaterSortGame:
 
         
         popup.after(duration, popup.destroy)
+        def select_tube(self, idx):
+        if self.selected_tube is None:
+            self.selected_tube = idx
+            self.show_temporary_message(
+                f"Tube {idx + 1} selected.Now Choose a right tube to put into.",
+                "blue",
