@@ -129,3 +129,9 @@ class WaterSortGame:
             self.show_temporary_message(
                 f"Tube {idx + 1} selected.Now Choose a right tube to put into.",
                 "blue",
+                400,  
+                300,  
+                0000, 
+                position="left"  
+            )
+        else:
