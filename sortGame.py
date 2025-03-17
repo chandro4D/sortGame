@@ -135,3 +135,12 @@ class WaterSortGame:
                 position="left"  
             )
         else:
+            if idx == self.selected_tube:
+                self.show_temporary_message(
+                    "You cannot put into the same tube.",
+                    "red",
+                    400,
+                    300,
+                    2000,
+                    position="center"
+                )
