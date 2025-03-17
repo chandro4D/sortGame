@@ -144,3 +144,8 @@ class WaterSortGame:
                     2000,
                     position="center"
                 )
+                 else:
+                self.pour(self.selected_tube, idx)
+                self.update_ui()
+
+            self.selected_tube = None
