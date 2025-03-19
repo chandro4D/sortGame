@@ -149,3 +149,6 @@ class WaterSortGame:
                 self.update_ui()
 
             self.selected_tube = None
+def pour(self, from_idx, to_idx):
+        from_tube = self.tubes[from_idx]
+        to_tube = self.tubes[to_idx]
