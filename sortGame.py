@@ -152,3 +152,11 @@ class WaterSortGame:
 def pour(self, from_idx, to_idx):
         from_tube = self.tubes[from_idx]
         to_tube = self.tubes[to_idx]
+        if from_tube.can_pour_into(to_tube):
+            to_tube.add_color(from_tube.remove_color())
+            self.update_ui()
+
+            if self.check_win():
+                self.show_temporary_message(
+                    "Congratulations!!! You Won!!!", "green", 1000, 500, 5000  
+                )
