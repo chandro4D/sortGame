@@ -123,7 +123,8 @@ class WaterSortGame:
 
         
         popup.after(duration, popup.destroy)
-        def select_tube(self, idx):
+
+    def select_tube(self, idx):
         if self.selected_tube is None:
             self.selected_tube = idx
             self.show_temporary_message(
@@ -144,14 +145,16 @@ class WaterSortGame:
                     2000,
                     position="center"
                 )
-                 else:
+            else:
                 self.pour(self.selected_tube, idx)
                 self.update_ui()
 
             self.selected_tube = None
-def pour(self, from_idx, to_idx):
+
+    def pour(self, from_idx, to_idx):
         from_tube = self.tubes[from_idx]
         to_tube = self.tubes[to_idx]
+
         if from_tube.can_pour_into(to_tube):
             to_tube.add_color(from_tube.remove_color())
             self.update_ui()
