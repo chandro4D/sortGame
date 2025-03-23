@@ -163,3 +163,8 @@ class WaterSortGame:
                 self.show_temporary_message(
                     "Congratulations!!! You Won!!!", "green", 1000, 500, 5000  
                 )
+                else:
+            self.show_temporary_message(
+                "You cannot put into this tube.", "red", 400, 300, 2000,
+                position="center"
+            )
