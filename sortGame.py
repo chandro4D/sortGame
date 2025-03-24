@@ -168,3 +168,8 @@ class WaterSortGame:
                 "You cannot put into this tube.", "red", 400, 300, 2000,
                 position="center"
             )
+            def check_win(self):
+        for tube in self.tubes:
+            if len(tube.colors) not in [0, 4] or (len(set(tube.colors)) > 1):
+                return False
+        return True
