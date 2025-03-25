@@ -173,3 +173,8 @@ class WaterSortGame:
             if len(tube.colors) not in [0, 4] or (len(set(tube.colors)) > 1):
                 return False
         return True
+    if __name__ == "__main__":
+    root = tk.Tk()
+    root.title("Water Sort Game")
+
+    game = WaterSortGame(root, 6)
