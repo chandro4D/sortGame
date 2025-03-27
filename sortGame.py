@@ -178,3 +178,7 @@ class WaterSortGame:
     root.title("Water Sort Game")
 
     game = WaterSortGame(root, 6)
+    game.tubes[0].add_color("red")
+    game.tubes[0].add_color("blue")
+    game.tubes[0].add_color("green")
+    game.tubes[0].add_color("yellow") 
