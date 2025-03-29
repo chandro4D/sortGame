@@ -187,3 +187,8 @@ class WaterSortGame:
     game.tubes[1].add_color("blue")
     game.tubes[1].add_color("green")
     game.tubes[1].add_color("yellow")
+    
+    game.tubes[2].add_color("red")
+    game.tubes[2].add_color("blue")
+    game.tubes[2].add_color("green")
+    game.tubes[2].add_color("yellow")
