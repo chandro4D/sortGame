@@ -192,3 +192,10 @@ class WaterSortGame:
     game.tubes[2].add_color("blue")
     game.tubes[2].add_color("green")
     game.tubes[2].add_color("yellow")
+    game.tubes[3].add_color("red")
+    game.tubes[3].add_color("blue")
+    game.tubes[3].add_color("green")
+    game.tubes[3].add_color("yellow")
+    game.update_ui()
+
+    root.mainloop()
