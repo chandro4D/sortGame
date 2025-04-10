@@ -163,35 +163,41 @@ class WaterSortGame:
                 self.show_temporary_message(
                     "Congratulations!!! You Won!!!", "green", 1000, 500, 5000  
                 )
-                else:
+        else:
             self.show_temporary_message(
                 "You cannot put into this tube.", "red", 400, 300, 2000,
                 position="center"
             )
-            def check_win(self):
+
+    def check_win(self):
         for tube in self.tubes:
             if len(tube.colors) not in [0, 4] or (len(set(tube.colors)) > 1):
                 return False
         return True
-    if __name__ == "__main__":
+
+
+if __name__ == "__main__":
     root = tk.Tk()
     root.title("Water Sort Game")
 
     game = WaterSortGame(root, 6)
+
+   
     game.tubes[0].add_color("red")
     game.tubes[0].add_color("blue")
     game.tubes[0].add_color("green")
-    game.tubes[0].add_color("yellow") 
-    
+    game.tubes[0].add_color("yellow")
+
     game.tubes[1].add_color("red")
     game.tubes[1].add_color("blue")
     game.tubes[1].add_color("green")
     game.tubes[1].add_color("yellow")
-    
+
     game.tubes[2].add_color("red")
     game.tubes[2].add_color("blue")
     game.tubes[2].add_color("green")
     game.tubes[2].add_color("yellow")
+
     game.tubes[3].add_color("red")
     game.tubes[3].add_color("blue")
     game.tubes[3].add_color("green")
